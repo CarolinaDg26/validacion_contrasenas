@@ -15,22 +15,22 @@ require 'conexion.php';
     </div>
 
     <div class="column">
-        <div id="fila-nombres"></div>
+        <div id="fila-nombres"name="nombre"></div>
     </div>
 
     <div class="column">
-        <div id="fila-apellidos"></div>
+        <div id="fila-apellidos" name="apellido"></div>
     </div>
 
     <div class="column">
         <p>Nombres de tu mascota:</p>
-        <div id="fila-mascotas"></div>
+        <div id="fila-mascotas" name="mascotas"></div>
     </div>
 
     <div style="clear: both;"></div> <!-- Clear float para evitar problemas de altura -->
 
     <div>
-        <h1>Calculadora de Edad</h1>
+        <h1>Edad</h1>
         <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
         <input type="date" id="fecha-nacimiento">
         <button onclick="calcularEdad()">Calcular Edad</button>
@@ -51,10 +51,10 @@ require 'conexion.php';
 
     <div>
         <label for="correo">Ingresa un correo electrónico Ficticio</label><br>
-        <input type="text" id="miTexto" placeholder="Correo Electrónico" size="30">
+        <input type="text" id="email" placeholder="Correo Electrónico" size="30">
         <br>
         <label for="contrasena">Ingresa una Contraseña:</label><br>
-        <input type="text" id="miTexto" placeholder="Contraseña" size="30"><br>
+        <input type="text" id="contrasena" placeholder="Contraseña" size="30"><br>
         <button onclick="guardarTexto()">Guardar</button>
     </div>
 
