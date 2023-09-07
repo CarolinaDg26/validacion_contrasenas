@@ -4,6 +4,7 @@
     margin: auto;
     /*border: 1px red solid;*/
     background-color:#730220;
+    background-image: url("./imagenes/fondo.png");
   }
   .fondo{
     background-color: #E8D38B;
