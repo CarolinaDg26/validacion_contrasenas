@@ -7,7 +7,7 @@ require 'conexion.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validación de contraseñas</title>
-    <link rel="stylesheet" href="estilo2.css">
+    <link rel="stylesheet" href="estilo.css">
     <script src='https://kit.fontawesome.com/e3805e7bb5.js' crossorigin='anonymous'></script>
 </head>
 <body onload="generarNumero()" class="ancho" >
