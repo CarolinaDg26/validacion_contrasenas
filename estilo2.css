@@ -5,7 +5,7 @@
     /*border: 1px red solid;*/
     background-color:#730220;
     background-image: url("./imagenes/fondo.png");
-    background-size: 220px 750px;
+    background-size: 220px 620px;
   }
   .fondo{
     background-color: #E8D38B;
@@ -28,7 +28,7 @@
     color: #730220;
     }
   .user{
-    /*border: 1px rgb(255, 0, 170) solid;*/
+    border: 1px rgb(255, 0, 170) solid;
     font-size: 50px;
    }
   .column {
