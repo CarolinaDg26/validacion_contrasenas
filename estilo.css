@@ -21,7 +21,6 @@
   .contenedor1{
     border: 1px #E8D38B solid;
     text-align: center;
-    /*text-shadow: 3px 3px 1px black;*/
     font-family: Times;
     font-size: 20px;
     color: #730220;
@@ -31,13 +30,9 @@
     font-size: 50px;
    }
   .column {
-    /*float: left;*/
     width: 100%;
-    /*padding: 5px;*/
     /*border: 1px rgb(208, 255, 0) solid;*/
     padding-right: 100px;
-    /*padding-top: -10%;*/
-    /*float: right;*/
     font-size: 30px;
     font-family: Georgia;
     }
@@ -60,13 +55,8 @@
       height: 130px;
     }
   .column2 {
-    /*float: left;*/
     width: 500px;
-    /*padding: 0%;*/
     /*border: 1px rgb(208, 255, 0) solid;*/
-    /*padding-right: 60%;*/
-    /*padding-top: -10%;*/
-    /*float: right;*/
     font-size: 25px;
     font-family: Georgia;
     }
@@ -91,12 +81,8 @@
       height: 120px;
     }
     .column3 {
-    /*float: left;*/
     width: 390px;
     /*border: 1px rgb(208, 255, 0) solid;*/
-    /*padding: 10px;
-    float: right;
-    display: inline-block;*/
     font-size: 25px;
     font-family: Georgia;
     }
@@ -121,14 +107,9 @@
     }
 
   .column4 {
-  /*display: inline-block;*/
-    /*float: left;*/
     width: 500px;
-    /*padding: 0%;*/
     /*border: 1px rgb(208, 255, 0) solid;*/
     padding-right: 100px;
-    /*padding-top: -10%;*/
-    /*float: right;*/
     font-size: 25px;
     font-family: Georgia;
   }
@@ -156,8 +137,6 @@
   .contenido{
     /* border: 1px rgb(0, 153, 255) solid; */
     padding: 2px;
-    /*padding-right: 68%;*/
-    /*float: right;*/
     font-size: 20px;
     font-family: Georgia;
     width: 800px;
