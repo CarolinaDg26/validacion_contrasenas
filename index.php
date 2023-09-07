@@ -7,21 +7,24 @@ require 'conexion.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validación de contraseñas</title>
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo2.css">
+    <script src='https://kit.fontawesome.com/e3805e7bb5.js' crossorigin='anonymous'></script>
 </head>
-<body onload="generarNumero()" class="ancho">
-<form action="enviar.php" id="forml" name="forml" method="POST">    
+<body onload="generarNumero()" class="ancho" >
+<form class="fondo"action="enviar.php" id="forml" name="forml" method="POST">
 
-    <div class="contenedor1 ancho">
-        <h1>De acuerdo con la información presentada, proporciona un correo electrónico ficticio y una contraseña:</h1>
+    <div class="contenedor1">
+        <h1>De acuerdo con la información presentada, proporciona tu edad, un correo electrónico ficticio y una contraseña:</h1>
+    </div>
+
+    <i class="fa-regular fa-user user"></i>
+
+    <div class="column">
+    <p>Nombre: </p><input text="" type="text" id="fila-nombres"name="nombre"/>
     </div>
 
     <div class="column">
-        <input text="" type="text" id="fila-nombres"name="nombre"/>
-    </div>
-
-    <div class="column">
-        <input text="" type="text" id="fila-apellidos" name="apellido"/>
+        <p>Apellido: </p><input text="" type="text" id="fila-apellidos" name="apellido"/>
     </div>
 
     <div class="column">
@@ -31,27 +34,27 @@ require 'conexion.php';
 
     <div style="clear: both;"></div> <!-- Clear float para evitar problemas de altura -->
 
-    <div>
-        <h1>Edad</h1>
-        <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+    <div class="column">
+        <!--h1>Edad</!h1-->
+        <label  for="fecha-nacimiento">Fecha de Nacimiento:</label>
         <input type="date" id="fecha-nacimiento">
         <input class="btn_enviar" onclick="calcularEdad()" value="Guardar" type="button"/>
         <input type="text" id="resultado" name="fecha" readonly="true"/>
     </div>
 
-    <div>
-        <h1>Números de Teléfono</h1>
-        <!--<label for="lada">Selecciona una Lada:</label>
+    <div class="column">
+        <!--h1>Números de Teléfono</!--h1>
+        <label for="lada">Selecciona una Lada:</label>
         <select id="lada">
             <option value="999">999</option>
             <option value="988">988</option>
             Agrega más opciones de ladas según sea necesario
         </select
         <button-- onclick="generarNumero()">Generar Número</button-->
-        <input type="text" id="numero-generado" name="telefono"/>
+        <p>Número telefónico:</p><input type="text" id="numero-generado" name="telefono"/>
     </div>
 
-    <div>
+    <div class="contenido">
         <label for="correo">Ingresa un correo electrónico Ficticio</label><br>
         <input type="text" id="email" placeholder="Correo Electrónico" size="30" name="correo">
         <br>
@@ -59,9 +62,13 @@ require 'conexion.php';
         <input type="text" id="contrasena" placeholder="Contraseña" size="30" name="contra"><br>
         <input class="btn_enviar" type="button" value="Enviar" onclick="validar_formulario()"/>
     </div>
+    <br><br>
+    <div class="contenedor2">
+        <img class="imge" src="./imagenes/maia.png" alt="">
+    </div>
 
 </form>
-
+<!--Todas las funciones-->
     <script>
         // Función para cargar y mostrar un elemento aleatorio de un archivo CSV
         function mostrarElementoAleatorio(url, containerId) {
