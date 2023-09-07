@@ -17,7 +17,9 @@ require 'conexion.php';
         <h1>De acuerdo con la información presentada, proporciona tu edad, un correo electrónico ficticio y una contraseña:</h1>
     </div>
 
-    <i class="fa-regular fa-user user"></i>
+    <div class="imguser">
+    <i class="fa-regular fa-user user"></i> <br>
+    </div>
 
     <div class="column">
     <p>Nombre: </p><input text="" type="text" id="fila-nombres"name="nombre"/>
@@ -26,23 +28,38 @@ require 'conexion.php';
     <div class="column">
         <p>Apellido: </p><input text="" type="text" id="fila-apellidos" name="apellido"/>
     </div>
+    <br><br><br>
 
-    <div class="column">
+    <div class="imguser2">
+    <i class="fa-solid fa-paw user"></i>
+    </div>
+
+    <div class="column2">
         <p>Nombres de tu mascota:</p>
         <input text="" type="text" id="fila-mascotas" name="mascot"/>
     </div>
 
-    <div style="clear: both;"></div> <!-- Clear float para evitar problemas de altura -->
+    <div style="clear: both;"></div>  <!--Clear float para evitar problemas de altura -->
 
-    <div class="column">
+    <br>
+    <div class="imguser3">
+    <i class="fa-solid fa-calendar-days user"></i>
+    </div>
+
+    <div class="column3">
         <!--h1>Edad</!h1-->
         <label  for="fecha-nacimiento">Fecha de Nacimiento:</label>
         <input type="date" id="fecha-nacimiento">
         <input class="btn_enviar" onclick="calcularEdad()" value="Guardar" type="button"/>
         <input type="text" id="resultado" name="fecha" readonly="true"/>
     </div>
+    <br><br>
 
-    <div class="column">
+    <div class="imguser4">
+    <i class="fa-solid fa-phone-volume user"></i>
+    </div>
+
+    <div class="column4">
         <!--h1>Números de Teléfono</!--h1>
         <label for="lada">Selecciona una Lada:</label>
         <select id="lada">
@@ -53,7 +70,10 @@ require 'conexion.php';
         <button-- onclick="generarNumero()">Generar Número</button-->
         <p>Número telefónico:</p><input type="text" id="numero-generado" name="telefono"/>
     </div>
-
+    <br><br><br><br><br>
+    <div class="imguser5">
+    <i class="fa-solid fa-envelopes-bulk user"></i>
+    </div>
     <div class="contenido">
         <label for="correo">Ingresa un correo electrónico Ficticio</label><br>
         <input type="text" id="email" placeholder="Correo Electrónico" size="30" name="correo">
@@ -62,7 +82,7 @@ require 'conexion.php';
         <input type="text" id="contrasena" placeholder="Contraseña" size="30" name="contra"><br>
         <input class="btn_enviar" type="button" value="Enviar" onclick="validar_formulario()"/>
     </div>
-    <br><br>
+    <br><br><br><br>
     <div class="contenedor2">
         <img class="imge" src="./imagenes/maia.png" alt="">
     </div>

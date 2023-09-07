@@ -11,25 +11,86 @@
     font-family: Times;
     color: #730220;
     }
+    .imguser{
+      display: inline-block;
+      padding-top: 1%;
+      padding-left: 2%;
+    }
+    .imguser2{
+      display: inline-block;
+      padding-top: 10%;
+      padding-left: 2%;
+    }
+    .imguser3{
+      display: inline-block;
+      padding-top: -1%;
+      padding-left: 2%;
+    }
+    .imguser4{
+      padding-top: 1%;
+      padding-left: 2%;
+      display: inline-block;
+    }
+    .imguser5{
+      padding-top: 1%;
+      padding-left: 2%;
+      display: inline-block;
+    }
     .user{
       border: 1px rgb(255, 0, 170) solid;
+      font-size: 50px;
     }
   .contenedor2{
     border: 1px rgb(255, 0, 170) solid;
     background-color: black;
     }
   .column {
-    float: left;
+    /*float: left;*/
     width: 50%;
     padding: 10px;
     border: 1px rgb(208, 255, 0) solid;
+    padding-right: 40%;
+    padding-top: -20%;
+    float: right;
+
     }
+    .column2 {
+      /*float: left;*/
+      width: 50%;
+      padding: 0%;
+      border: 1px rgb(208, 255, 0) solid;
+      padding-right: 41%;
+      float: right;
+      display: inline-block;
+      }
+
+      .column3 {
+        /*float: left;*/
+        width: 50%;
+        padding: 10px;
+        border: 1px rgb(208, 255, 0) solid;
+        padding-right: 40%;
+        float: right;
+        display: inline-block;
+        }
+  .column4 {
+  /*float: left;*/
+  width: 50%;
+  padding: 0px;
+  border: 1px rgb(208, 255, 0) solid;
+  padding-right: 41%;
+  float: right;
+  /*display: inline-block;*/
+  }
   .imge{
     width: 25%;
     padding-left: 38%;
     }
   .contenido{
     border: 1px rgb(0, 153, 255) solid;
+    padding: 0px;
+    padding-right: 68%;
+    float: right;
     }
   .fondo{
     background-color: #E8D38B;
