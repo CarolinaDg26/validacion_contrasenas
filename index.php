@@ -7,7 +7,7 @@ require 'conexion.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validación de contraseñas</title>
-    <link rel="stylesheet" href="estilo2.css">
+    <link rel="stylesheet" href="estilo.css">
     <script src='https://kit.fontawesome.com/e3805e7bb5.js' crossorigin='anonymous'></script>
 </head>
 <body onload="generarNumero()" class="ancho" >
@@ -16,50 +16,57 @@ require 'conexion.php';
     <div class="contenedor1">
         <h1>De acuerdo con la información presentada, proporciona tu edad, un correo electrónico ficticio y una contraseña:</h1>
     </div>
+    <div class="prueba">
+     <div class="imguser">
+     <i class="fa-regular fa-user user"></i> <br>
+     </div>
 
-    <div class="imguser">
-    <i class="fa-regular fa-user user"></i> <br>
-    </div>
+     <div class="column">
+     <p>Nombre: </p><input class="campos" text="" type="text" id="fila-nombres"name="nombre"/>
+     </div>
 
-    <div class="column">
-    <p>Nombre: </p><input text="" type="text" id="fila-nombres"name="nombre"/>
-    </div>
-
-    <div class="column">
+     <div class="column">
         <p>Apellido: </p><input text="" type="text" id="fila-apellidos" name="apellido"/>
     </div>
-    <br><br><br>
-
-    <div class="imguser2">
-    <i class="fa-solid fa-paw user"></i>
     </div>
 
-    <div class="column2">
+    <br><br><br>
+
+    <div class="prueba1">
+     <div class="imguser2">
+     <i class="fa-solid fa-paw user"></i>
+     </div>
+     <div class="column2">
         <p>Nombres de tu mascota:</p>
         <input text="" type="text" id="fila-mascotas" name="mascot"/>
+     </div>
     </div>
 
     <div style="clear: both;"></div>  <!--Clear float para evitar problemas de altura -->
 
     <br>
+
+    <div class="prueba2">
     <div class="imguser3">
     <i class="fa-solid fa-calendar-days user"></i>
     </div>
-
-    <div class="column3">
+     <div class="column3">
         <!--h1>Edad</!h1-->
         <label  for="fecha-nacimiento">Fecha de Nacimiento:</label>
         <input type="date" id="fecha-nacimiento">
         <input class="btn_enviar" onclick="calcularEdad()" value="Guardar" type="button"/>
         <input type="text" id="resultado" name="fecha" readonly="true"/>
+     </div>
     </div>
+
     <br><br>
 
-    <div class="imguser4">
-    <i class="fa-solid fa-phone-volume user"></i>
-    </div>
+    <div class="prueba3">
+     <div class="imguser4">
+       <i class="fa-solid fa-phone-volume user"></i>
+     </div>
 
-    <div class="column4">
+     <div class="column4">
         <!--h1>Números de Teléfono</!--h1>
         <label for="lada">Selecciona una Lada:</label>
         <select id="lada">
@@ -69,23 +76,29 @@ require 'conexion.php';
         </select
         <button-- onclick="generarNumero()">Generar Número</button-->
         <p>Número telefónico:</p><input type="text" id="numero-generado" name="telefono"/>
+     </div>
     </div>
-    <br><br><br><br><br>
-    <div class="imguser5">
-    <i class="fa-solid fa-envelopes-bulk user"></i>
-    </div>
-    <div class="contenido">
+
+    <br><br><br>
+    <div class="prueba4">
+     <div class="imguser5">
+     <i class="fa-solid fa-envelopes-bulk user"></i>
+     </div>
+     <div class="contenido">
         <label for="correo">Ingresa un correo electrónico Ficticio</label><br>
         <input type="text" id="email" placeholder="Correo Electrónico" size="30" name="correo">
         <br>
         <label for="contrasena">Ingresa una Contraseña:</label><br>
         <input type="text" id="contrasena" placeholder="Contraseña" size="30" name="contra"><br>
         <input class="btn_enviar" type="button" value="Enviar" onclick="validar_formulario()"/>
-    </div>
-    <br><br><br><br>
+      </div>
+     </div>
+    <br><br><br><br><br><br><br>
+
     <div class="contenedor2">
         <img class="imge" src="./imagenes/maia.png" alt="">
     </div>
+
 
 </form>
 <!--Todas las funciones-->
@@ -146,12 +159,12 @@ require 'conexion.php';
         }
         function generarNumero() {
             // const lada = document.getElementById("lada").value;
-            
+
             // Genera los últimos 6 dígitos del número aleatoriamente
             const numerosAleatorios = Math.floor(Math.random() * 1000000).toString().padStart(7, '0');
-            
+
             const numero = `999 ${numerosAleatorios}`;
-            
+
             document.getElementById("numero-generado").value = `${numero}`;
         }
 
