@@ -14,7 +14,8 @@ require 'conexion.php';
 <form class="fondo"action="enviar.php" id="forml" name="forml" method="POST">
 
     <div class="contenedor1">
-        <h1>De acuerdo con la información presentada, proporciona tu edad, un correo electrónico ficticio y una contraseña:</h1>
+        <h1>Instrucciones:</h1>
+        <h2>De acuerdo con la información presentada, proporciona una edad, un correo electrónico y una contraseña ficticios:</h2>
     </div>
     <div class="prueba">
      <div class="imguser">
@@ -94,11 +95,11 @@ require 'conexion.php';
         <input type="text" id="contrasena" placeholder="Contraseña" size="30" name="contra"><br>
         <br><br><br><br>
         </div>
-        <div class="contenido">
+     </div><br><br><br>
+     <div class="contenido2">
         <input class="btn_enviar" type="button" value="Enviar" onclick="validar_formulario()"/>
-        </div>
-     </div>
-    <br><br><br><br>
+    </div>
+    <br><br><br>
 
     <div class="contenedor2">
         <img class="imge" src="./imagenes/maia.png" alt="">
