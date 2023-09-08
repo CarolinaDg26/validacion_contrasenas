@@ -1,6 +1,6 @@
 .ancho{
     max-width: 900px;
-    height: 1200px;
+    height: 1100px;
     margin: auto;
     /*border: 1px red solid;*/
     background-color:#730220;
@@ -23,7 +23,7 @@
   .contenedor1{
     border: 1px #E8D38B solid;
     text-align: center;
-    font-family: Times;
+    font-family:'Times New Roman', Times, serif;
     font-size: 20px;
     color: #730220;
     }
@@ -33,7 +33,7 @@
    }
   .column {
     width: 100%;
-    /*border: 1px rgb(208, 255, 0) solid;*/
+    /* border: 1px rgb(208, 255, 0) solid; */
     padding-right: 100px;
     font-size: 30px;
     font-family: Georgia;
@@ -84,7 +84,7 @@
     }
     .column3 {
     width: 390px;
-    /*border: 1px rgb(208, 255, 0) solid;*/
+    /* border: 1px rgb(0, 47, 255) solid; */
     font-size: 25px;
     font-family: Georgia;
     }
@@ -100,6 +100,10 @@
       border-radius: 5px;
       border: 2px solid #730220;
       padding: 10px;
+    }
+    .btn_enviar:hover{
+      background: #730220;
+      color: rgb(255, 255, 255);
     }
     .prueba2{
       display: inline-flex;
@@ -139,18 +143,18 @@
   .contenido{
     /* border: 1px rgb(0, 153, 255) solid; */
     padding: 2px;
+    padding-right: 50px;
     font-size: 20px;
     font-family: Georgia;
-    width: 800px;
+    width: 1100%;
     box-sizing: border-box;
     }
     .imguser5{
-      /*border: 1px rgb(200, 255, 0) solid;*/
+      /* border: 1px rgb(200, 255, 0) solid; */
       padding-top: 1%;
       padding-left: 2%;
       display: inline-block;
       flex-wrap: wrap;
-      padding-top: 5%;
       margin: 5px;
     }
     .contenido input{

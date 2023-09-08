@@ -22,11 +22,11 @@ require 'conexion.php';
      </div>
 
      <div class="column">
-     <p>Nombre: </p><input class="campos" text="" type="text" id="fila-nombres"name="nombre"/>
+     <p>Nombre: </p><input class="campos" text="" type="text" id="fila-nombres"name="nombre"readonly="true"/>
      </div>
 
      <div class="column">
-        <p>Apellido: </p><input text="" type="text" id="fila-apellidos" name="apellido"/>
+        <p>Apellido: </p><input text="" type="text" id="fila-apellidos" name="apellido"readonly="true"/>
     </div>
     </div>
 
@@ -38,7 +38,7 @@ require 'conexion.php';
      </div>
      <div class="column2">
         <p>Nombres de tu mascota:</p>
-        <input text="" type="text" id="fila-mascotas" name="mascot"/>
+        <input text="" type="text" id="fila-mascotas" name="mascot"readonly="true"/>
      </div>
     </div>
 
@@ -52,9 +52,9 @@ require 'conexion.php';
     </div>
      <div class="column3">
         <!--h1>Edad</!h1-->
-        <label  for="fecha-nacimiento">Fecha de Nacimiento:</label>
+        <label  for="fecha-nacimiento">Fecha de Nacimiento:</label><br><br>
         <input type="date" id="fecha-nacimiento">
-        <input class="btn_enviar" onclick="calcularEdad()" value="Guardar" type="button"/>
+        <input class="btn_enviar" onclick="calcularEdad()" value="Generar" type="button"/><br>
         <input type="text" id="resultado" name="fecha" readonly="true"/>
      </div>
     </div>
@@ -75,7 +75,7 @@ require 'conexion.php';
             Agrega más opciones de ladas según sea necesario
         </select
         <button-- onclick="generarNumero()">Generar Número</button-->
-        <p>Número telefónico:</p><input type="text" id="numero-generado" name="telefono"/>
+        <p>Número telefónico:</p><input type="text" id="numero-generado" name="telefono" readonly="true"/>
      </div>
     </div>
 
@@ -85,15 +85,20 @@ require 'conexion.php';
      <i class="fa-solid fa-envelopes-bulk user"></i>
      </div>
      <div class="contenido">
-        <label for="correo">Ingresa un correo electrónico Ficticio</label><br>
+        <label for="correo">Ingresa un correo electrónico Ficticio:</label><br><br>
         <input type="text" id="email" placeholder="Correo Electrónico" size="30" name="correo">
-        <br>
-        <label for="contrasena">Ingresa una Contraseña:</label><br>
+        <br><br>
+        </div>
+        <div class="contenido">
+        <label for="contrasena">Ingresa una Contraseña: </label><br><br><br>
         <input type="text" id="contrasena" placeholder="Contraseña" size="30" name="contra"><br>
+        <br><br><br><br>
+        </div>
+        <div class="contenido">
         <input class="btn_enviar" type="button" value="Enviar" onclick="validar_formulario()"/>
-      </div>
+        </div>
      </div>
-    <br><br><br><br><br><br><br>
+    <br><br><br><br>
 
     <div class="contenedor2">
         <img class="imge" src="./imagenes/maia.png" alt="">
