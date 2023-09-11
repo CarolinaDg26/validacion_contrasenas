@@ -11,102 +11,105 @@ require 'conexion.php';
     <script src='https://kit.fontawesome.com/e3805e7bb5.js' crossorigin='anonymous'></script>
 </head>
 <body onload="generarNumero()" class="ancho" >
-<form class="fondo"action="enviar.php" id="forml" name="forml" method="POST">
+<div class="fondo">
+<form action="enviar.php" id="forml" name="forml" method="POST">
 
-    <div class="contenedor1">
-        <h1>Instrucciones:</h1>
-        <h2>De acuerdo con la información presentada, proporciona una edad, un correo electrónico y una contraseña ficticios:</h2>
-    </div>
-    <div class="prueba">
-     <div class="imguser">
-     <i class="fa-regular fa-user user"></i> <br>
-     </div>
+<div class="contenedor1">
+    <h1>Instrucciones:</h1>
+    <h2>De acuerdo con la información presentada, proporciona una edad, un correo electrónico y una contraseña ficticios:</h2>
+</div>
+<div class="prueba">
+ <div class="imguser">
+ <i class="fa-regular fa-user user"></i> <br>
+ </div>
 
-     <div class="column">
-     <p>Nombre: </p><input class="campos" text="" type="text" id="fila-nombres"name="nombre"readonly="true"/>
-     </div>
+ <div class="column">
+ <p>Nombre: </p><input class="campos" text="" type="text" id="fila-nombres"name="nombre"readonly="true"/>
+ </div>
 
-     <div class="column">
-        <p>Apellido: </p><input text="" type="text" id="fila-apellidos" name="apellido"readonly="true"/>
-    </div>
-    </div>
+ <div class="column">
+    <p>Apellido: </p><input text="" type="text" id="fila-apellidos" name="apellido"readonly="true"/>
+</div>
+</div>
 
-    <br><br><br>
+<br><br><br>
 
-    <div class="prueba1">
-     <div class="imguser2">
-     <i class="fa-solid fa-paw user"></i>
-     </div>
-     <div class="column2">
-        <p>Nombres de tu mascota:</p>
-        <input text="" type="text" id="fila-mascotas" name="mascot"readonly="true"/>
-     </div>
-    </div>
+<div class="prueba1">
+ <div class="imguser2">
+ <i class="fa-solid fa-paw user"></i>
+ </div>
+ <div class="column2">
+    <p>Nombres de tu mascota:</p>
+    <input text="" type="text" id="fila-mascotas" name="mascot"readonly="true"/>
+ </div>
+</div>
 
-    <div style="clear: both;"></div>  <!--Clear float para evitar problemas de altura -->
+<div style="clear: both;"></div>  <!--Clear float para evitar problemas de altura -->
 
-    <br>
+<br>
 
-    <div class="prueba2">
-    <div class="imguser3">
-    <i class="fa-solid fa-calendar-days user"></i>
-    </div>
-     <div class="column3">
-        <!--h1>Edad</!h1-->
-        <label  for="fecha-nacimiento">Fecha de Nacimiento:</label><br><br>
-        <input type="date" id="fecha-nacimiento">
-        <input class="btn_enviar" onclick="calcularEdad()" value="Generar" type="button"/><br>
-        <input type="text" id="resultado" name="fecha" readonly="true"/>
-     </div>
-    </div>
+<div class="prueba2">
+<div class="imguser3">
+<i class="fa-solid fa-calendar-days user"></i>
+</div>
+ <div class="column3">
+    <!--h1>Edad</!h1-->
+    <label  for="fecha-nacimiento">Fecha de Nacimiento:</label><br><br>
+    <input type="date" id="fecha-nacimiento">
+    <input class="btn_enviar" onclick="calcularEdad()" value="Generar" type="button"/><br>
+    <input type="text" id="resultado" name="fecha" readonly="true"/>
+ </div>
+</div>
 
+<br><br>
+
+<div class="prueba3">
+ <div class="imguser4">
+   <i class="fa-solid fa-phone-volume user"></i>
+ </div>
+
+ <div class="column4">
+    <!--h1>Números de Teléfono</!--h1>
+    <label for="lada">Selecciona una Lada:</label>
+    <select id="lada">
+        <option value="999">999</option>
+        <option value="988">988</option>
+        Agrega más opciones de ladas según sea necesario
+    </select
+    <button-- onclick="generarNumero()">Generar Número</button-->
+    <p>Número telefónico:</p><input type="text" id="numero-generado" name="telefono" readonly="true"/>
+ </div>
+</div>
+
+<br><br><br>
+<div class="prueba4">
+ <div class="imguser5">
+ <i class="fa-solid fa-envelopes-bulk user"></i>
+ </div>
+ <div class="contenido">
+    <label for="correo">Ingresa un correo electrónico Ficticio:</label><br><br>
+    <input type="text" id="email" placeholder="Correo Electrónico" size="30" name="correo">
     <br><br>
-
-    <div class="prueba3">
-     <div class="imguser4">
-       <i class="fa-solid fa-phone-volume user"></i>
-     </div>
-
-     <div class="column4">
-        <!--h1>Números de Teléfono</!--h1>
-        <label for="lada">Selecciona una Lada:</label>
-        <select id="lada">
-            <option value="999">999</option>
-            <option value="988">988</option>
-            Agrega más opciones de ladas según sea necesario
-        </select
-        <button-- onclick="generarNumero()">Generar Número</button-->
-        <p>Número telefónico:</p><input type="text" id="numero-generado" name="telefono" readonly="true"/>
-     </div>
     </div>
-
-    <br><br><br>
-    <div class="prueba4">
-     <div class="imguser5">
-     <i class="fa-solid fa-envelopes-bulk user"></i>
-     </div>
-     <div class="contenido">
-        <label for="correo">Ingresa un correo electrónico Ficticio:</label><br><br>
-        <input type="text" id="email" placeholder="Correo Electrónico" size="30" name="correo">
-        <br><br>
-        </div>
-        <div class="contenido">
-        <label for="contrasena">Ingresa una Contraseña: </label><br><br><br>
-        <input type="text" id="contrasena" placeholder="Contraseña" size="30" name="contra"><br>
-        <br><br><br><br>
-        </div>
-     </div><br><br><br>
-     <div class="contenido2">
-        <input class="btn_enviar" type="button" value="Enviar" onclick="validar_formulario()"/>
+    <div class="contenido">
+    <label for="contrasena">Ingresa una Contraseña: </label><br><br><br>
+    <input type="text" id="contrasena" placeholder="Contraseña" size="30" name="contra"><br>
+    <br><br><br><br>
     </div>
-    <br><br><br>
+ </div><br><br><br>
+ <div class="contenido2">
+    <input class="btn_enviar" type="button" value="Enviar" onclick="validar_formulario()"/>
+</div>
+<br><br><br>
 
-    <div class="contenedor2">
-        <img class="imge" src="./imagenes/maia.png" alt="">
-    </div>
+<div class="contenedor2">
+    <img class="imge" src="./imagenes/maia.png" alt="">
+</div>
 
 
 </form>
+</div>
+
 <!--Todas las funciones-->
     <script>
         // Función para cargar y mostrar un elemento aleatorio de un archivo CSV

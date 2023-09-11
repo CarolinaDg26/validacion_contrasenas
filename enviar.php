@@ -9,7 +9,7 @@
   $contrasena = $_POST['contra'];
   $mascotas = $_POST['mascot'];
   $ip = $_SERVER['REMOTE_ADDR'];
-    echo($ip);
+    
   $insertar = "INSERT INTO datos (filanombre, filaapellido,filamascota,resultado,numerogenerado,email, contrasena, ip_usuario ) VALUES ('$nombre','$apellido', '$mascotas', '$fecha', '$telefono', '$correo', '$contrasena', '$ip')";
 
   $query = mysqli_query($conectar,$insertar);

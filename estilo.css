@@ -1,19 +1,26 @@
 .ancho{
-    max-width: 900px;
-    height: 1100px;
+    max-width: 800px;
+    /* height: 1100px; */
     margin: auto;
+    padding: 0px;
     /*border: 1px red solid;*/
-    background-color:#730220;
-    background-image: url("./imagenes/fondo.png");
-    background-size: 220px 620px;
+    background-color:#000000;
+    backdrop-filter: blur(5px);
+    /* background-image: url("./imagenes/fondo.png");
+    background-size: 1100px 1400px; */
   }
   .fondo{
-    background-color: #E8D38B;
+    color: #F7EAA0;
+    background-color: #730220;
+    /* border-radius: 25px ; */
+    /* background-image: url("./imagenes/fondo.png"); */
+    /* background-size: 1000px 1300px; */
   }
   .contenedor2{
     /*border: 1px rgb(255, 94, 0) solid;*/
     background-color: black;
     height: 180px;
+    /* border-radius: 25px ; */
   }
   .imge{
     width: 25%;
@@ -21,18 +28,27 @@
     padding-top: 21px;
   }
   .contenedor1{
-    border: 1px #E8D38B solid;
-    background-color: rgb(8, 8, 8);
-    color:#f8f8f8;
+    /* border: 1px #CFC8B9 solid; */
+    background-image: url("./imagenes/fondo.png");
+    /* background-color:#000000; */
+    color:#730220;
     text-align: center;
     font-family:'Times New Roman', Times, serif;
     font-size: 20px;
+    height: 100%;
+    padding: 20px;
+    padding-top: 20px;
+    }
+    .contenedor1 h1{
+      backdrop-filter: blur(5px);
+      text-align: center;
     }
     .contenedor1 h2{
       text-align: center;
       font-family:'Times New Roman', Times, serif;
       font-size: 28px;
-      color:#f8f8f8;
+      color:#730220;
+      backdrop-filter: blur(5px);
     }
   .user{
     /* border: 1px rgb(255, 0, 170) solid; */
@@ -55,7 +71,7 @@
     }
     .column input{
       border-radius: 5px;
-      border: 2px solid #730220;
+      border: 2px solid #F7EAA0;
       padding: 10px;
     }
     .prueba{
@@ -80,7 +96,7 @@
     }
     .column2 input{
       border-radius: 5px;
-      border: 2px solid #730220;
+      border: 2px solid #F7EAA0;
       padding: 10px;
     }
     .prueba1{
@@ -105,12 +121,12 @@
     }
     .column3 input{
       border-radius: 5px;
-      border: 2px solid #730220;
+      border: 2px solid #F7EAA0;
       padding: 10px;
     }
     .btn_enviar:hover{
-      background: #730220;
-      color: rgb(255, 255, 255);
+      background:#F7EAA0;
+      color: #730220;
     }
     .prueba2{
       display: inline-flex;
@@ -138,7 +154,7 @@
   }
   .column4 input{
     border-radius: 5px;
-    border: 2px solid #730220;
+    border: 2px solid #F7EAA0;
     padding: 10px;
   }
   .prueba3{
@@ -166,7 +182,7 @@
     }
     .contenido input{
       border-radius: 5px;
-      border: 2px solid #730220;
+      border: 2px solid #F7EAA0;
       padding: 10px;
     }
     .prueba4{
@@ -184,7 +200,7 @@
     }
     .contenido2 input{
       border-radius: 5px;
-      border: 2px solid #730220;
+      border: 2px solid #F7EAA0;
       font-size: 23px;
       padding: 10px;
       width: 150px;
