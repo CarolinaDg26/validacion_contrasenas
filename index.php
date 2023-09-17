@@ -10,7 +10,7 @@ require 'conexion.php';
     <link rel="stylesheet" href="estilo.css">
     <script src='https://kit.fontawesome.com/e3805e7bb5.js' crossorigin='anonymous'></script>
 </head>
-<body onload="generarNumero()" class="ancho" >
+<body  class="ancho" >
 <div class="fondo">
 <form action="enviar.php" id="forml" name="forml" method="POST">
 
@@ -56,7 +56,7 @@ Te pedimos encarecidamente que no compartas información personal real o sensibl
  </div>
  <div class="column3">
     <p>Fecha de nacimiento:</p>
-    <input text="" type="text" id="fecha-generada" name="fechaNacimiento" readonly="true"/>
+    <input text="" type="text" id="fecha-generada" name="fecha" readonly="true"/>
  </div>
  <div class="column3">
     <p>Edad:</p>
@@ -84,12 +84,12 @@ Te pedimos encarecidamente que no compartas información personal real o sensibl
  </div>
  <div class="contenido">
     <label for="correo">Ingresa un correo electrónico Ficticio:</label><br><br>
-    <input type="text" id="email" placeholder="Correo Electrónico" size="30" name="correo">
+    <input type="email" id="email" placeholder="Correo Electronico" value="@gmail.com" size="30" name="correo">
     <br><br>
     </div>
  <div class="contenido">
-    <label for="contrasena">Ingresa una Contraseña: </label><br><br><br>
-    <input type="text" id="contrasena" placeholder="Contraseña" size="30" name="contra"><br>
+    <label for="contrasena">Ingresa una Contraseña Ficticia de 8 Caracteres: </label><br><br>
+    <input type="text" id="contrasena" placeholder="Contraseña" size="30" name="contra" maxlength="8"><br>
     <br><br><br><br>
  </div>
  </div>
@@ -128,13 +128,13 @@ Te pedimos encarecidamente que no compartas información personal real o sensibl
                 apellido: cells[1],
                 // Agrega más propiedades según sea necesario
             };
-            
+
 
             // Ahora puedes usar este objeto en otras partes del código
             var campoNombre = document.getElementById(containerId);
             // alert (elementoAleatorio.nombre);
             campoNombre.value = elementoAleatorio.nombre;
-           
+
             // También puedes almacenar el objeto en una variable global si lo necesitas en múltiples lugares.
             //window.elementoAleatorio = elementoAleatorio;
         } else {
@@ -166,13 +166,13 @@ function mostrarElementoAleatorioApellido(url, containerId) {
                 apellido: cells[1]+" "+cells2[1],
                 // Agrega más propiedades según sea necesario
             };
-            
+
 
             // Ahora puedes usar este objeto en otras partes del código
             var campoNombre = document.getElementById(containerId);
             // alert (elementoAleatorio.nombre);
             campoNombre.value = elementoAleatorio.nombre;
-           
+
             // También puedes almacenar el objeto en una variable global si lo necesitas en múltiples lugares.
             //window.elementoAleatorio = elementoAleatorio;
         } else {
@@ -217,7 +217,7 @@ function mostrarElementoAleatorioApellido(url, containerId) {
 
 
                   // Genera una fecha aleatoria al cargar la página
-                window.onload = generarFechaYEdadAleatoria;
+                //window.onload = generarFechaYEdadAleatoria;
 
         function generarNumero() {
             // const lada = document.getElementById("lada").value;
@@ -230,7 +230,12 @@ function mostrarElementoAleatorioApellido(url, containerId) {
             document.getElementById("numero-generado").value = `${numero}`;
         }
 
-        // window.onload = generarNumero;
+         //window.onload = generarNumero;
+
+    window.addEventListener('load', function() {
+    generarFechaYEdadAleatoria();
+    generarNumero();
+});
 
 
         //Guardar los cuadros de texto

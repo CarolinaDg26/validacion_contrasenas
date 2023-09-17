@@ -4,13 +4,14 @@
   $nombre = addslashes($_POST['nombre']);
   $apellido = addslashes($_POST['apellido']);
   $fecha = $_POST['fecha'];
+  $edad = $_POST['edad'];
   $telefono = $_POST['telefono'];
   $correo = $_POST['correo'];
   $contrasena = $_POST['contra'];
   $mascotas = $_POST['mascot'];
   $ip = $_SERVER['REMOTE_ADDR'];
-    
-  $insertar = "INSERT INTO datos (filanombre, filaapellido,filamascota,resultado,numerogenerado,email, contrasena, ip_usuario ) VALUES ('$nombre','$apellido', '$mascotas', '$fecha', '$telefono', '$correo', '$contrasena', '$ip')";
+
+  $insertar = "INSERT INTO datos (filanombre, filaapellido, filamascota,fecha, edad,numerogenerado,email, contrasena, ip_usuario ) VALUES ('$nombre','$apellido', '$mascotas', '$fecha', '$edad', '$telefono', '$correo', '$contrasena', '$ip')";
 
   $query = mysqli_query($conectar,$insertar);
   if($query){

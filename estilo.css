@@ -171,10 +171,10 @@
   .contenido{
     /* border: 1px rgb(0, 153, 255) solid; */
     padding: 2px;
-    padding-right: 50px;
+    padding-right: 30px;
     font-size: 20px;
     font-family: Georgia;
-    width: 1100%;
+    width: 1000%;
     box-sizing: border-box;
     }
     .imguser5{
