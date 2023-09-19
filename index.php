@@ -22,7 +22,7 @@ require 'conexion.php';
         <img class="header__shadow header__shadow--3" src="img/shadow.svg" alt="">
         <div class="container container--12">
             <div class="header__body">
-                <h1 class="header__title">Generate Text AI</h1>
+                <h1 class="header__title">Password Generate</h1>
                 <p class="header__copy">Bienvenido a nuestra pagina, por favor, ten en cuenta que esta pagina web está
                     diseñada exclusivamente para fines académicos y aprendizaje, nuestro objetivo es proporcionarte una
                     experiencia educativa valiosa y practica. </p>
