@@ -1,110 +1,113 @@
 <?php
-require 'conexion.php';
+require 'conexion2.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="es">
+<head >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Text AI</title>
+    <title>Validación de contraseñas</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src='https://kit.fontawesome.com/e3805e7bb5.js' crossorigin='anonymous'></script>
 </head>
+<body  class="ancho" >
+<div class="fondo">
+<form action="enviar.php" id="forml" name="forml" method="POST">
 
-<body>
+<div class="contenedor1">
+    <p>Bienvenido a nuestra pagina!!, por favor, ten en cuenta que esta página web está diseñada exclusivamente para fines académicos y de aprendizaje, nuestro objetivo es proporcionarte una experiencia educativa valiosa y práctica.
+Te pedimos encarecidamente que no compartas información personal real o sensible en esta plataforma. <br> Únicamente utiliza los datos generados para fines académicos y prácticos dentro de esta página web.</p>
+    <h1>Instrucciones:</h1>
+    <h2>De acuerdo con la información presentada, proporciona una edad, un correo electrónico y una contraseña ficticios:</h2>
+</div>
+<div class="prueba">
+ <div class="imguser">
+  <i class="fa-regular fa-user user"></i> <br>
+ </div>
+
+ <div class="column">
+   <p>Nombre: </p><input class="campos" text="" type="text" id="fila-nombres" name="nombre" readonly="true"/>
+ </div>
+
+ <div class="column">
+    <p>Apellido: </p><input text="" type="text" id="fila-apellidos" name="apellido"readonly="true"/>
+ </div>
+</div>
+
+<br><br><br>
+
+<div class="prueba1">
+ <div class="imguser2">
+ <i class="fa-solid fa-paw user"></i>
+ </div>
+ <div class="column2">
+    <p>Nombres de tu mascota:</p>
+    <input text="" type="text" id="fila-mascotas" name="mascot"readonly="true"/>
+ </div>
+</div>
+
+<div style="clear: both;"></div>  <!--Clear float para evitar problemas de altura -->
+
+<br>
+
+<div class="prueba2">
+ <div class="imguser3">
+ <i class="fa-solid fa-calendar-days user"></i>
+ </div>
+ <div class="column3">
+    <p>Fecha de nacimiento:</p>
+    <input text="" type="text" id="fecha-generada" name="fecha" readonly="true"/>
+ </div>
+ <div class="column3">
+    <p>Edad:</p>
+    <input text="" type="text" id="edad" name="edad" readonly="true"/>
+ </div>
+
+</div>
+
+<br><br>
+
+<div class="prueba3">
+ <div class="imguser4">
+   <i class="fa-solid fa-phone-volume user"></i>
+ </div>
+
+ <div class="column4">
+    <p>Número telefónico:</p><input type="text" id="numero-generado" name="telefono" readonly="true"/>
+ </div>
+</div>
+
+<br><br><br>
+<div class="prueba4">
+ <div class="imguser5">
+  <i class="fa-solid fa-envelopes-bulk user"></i>
+ </div>
+ <div class="contenido">
+    <label for="correo">Ingresa un correo electrónico Ficticio:</label><br><br>
+    <input type="email" id="email" placeholder="Correo Electronico" value="@gmail.com" size="30" name="correo">
+    <br><br>
+    </div>
+ <div class="contenido">
+    <label for="contrasena">Ingresa una Contraseña Ficticia de 8 Caracteres: </label><br><br>
+    <input type="text" id="contrasena" placeholder="Contraseña" size="30" name="contra" maxlength="8"><br>
+    <br><br><br><br>
+ </div>
+ </div>
+ <br><br><br>
+ <div class="contenido2">
+    <input class="btn_enviar" type="button" value="Enviar" onclick="validar_formulario()"/>
+</div>
+<br><br><br>
+
+<div class="contenedor2">
+    <img class="imge" src="./imagenes/maia.png" alt="">
+</div>
 
 
-    <!-- HEADER -->
-    <header class="header">
-        <img class="header__image" src="img/banner2.webp" alt="">
-        <img class="header__shadow header__shadow--1" src="img/shadow.svg" alt="">
-        <img class="header__shadow header__shadow--2" src="img/shadow.svg" alt="">
-        <img class="header__shadow header__shadow--3" src="img/shadow.svg" alt="">
-        <div class="container container--12">
-            <div class="header__body">
-                <h1 class="header__title">Generate Text AI</h1>
-                <p class="header__copy">Bienvenido a nuestra pagina, por favor, ten en cuenta que esta pagina web está
-                    diseñada exclusivamente para fines académicos y aprendizaje, nuestro objetivo es proporcionarte una
-                    experiencia educativa valiosa y practica. </p>
-                <p class="header__copy">Te pedimos únicamente utiliza <span class="header__copy--bold"> los datos generados para fines académicos y prácticos dentro de esta página web.</span></p>
-            </div>
-        </div>
-    </header>
-     <!-- MAIN -->
-     <main class="main">
-        <div class="container container--9">
-            <div class="main__body">
-                
-                <!-- INSTRUCCIONES -->
-                <article class="instructions">
-                    <div class="instructions__left">
-                        <h2 class="instructions__title">INSTRUCCIONES</h2>
-                        <p class="instructions__copy">De acuerdo con la información presentada, <span class="instructions__copy--bold">proporciona un correo electrónico y una contraseña ficticios.</span></p>
-                    </div>
-                    <div class="instructions__right">
-                        <figure class="instructions__figure">
-                            <img class="instructions__image" src="img/cube.svg" alt="">
-                        </figure>
-                    </div>
-                </article>
+</form>
+</div>
 
-                <!-- TEXTO GENERADO -->
-                <article class="phrase">
-                    <h2 class="phrase__title">FRASE GENERADO</h2>
-                    <p class="phrase__copy">Mi nombre es</p>
-
-                </article>
-          
-                <!-- FORMULARIO -->
-                <form class="form" action="enviar.php" id="forml" name="forml" method="POST">
-                    <div class="form__information">
-                        <div class="form__item">
-                            <label class="form__label" for="nombre">Nombre</label>
-                            <input text="" type="text" class="form__input"  id="fila-nombres"name="nombre" readonly="true"  >
-                        </div>
-                        <div class="form__item">
-                            <label class="form__label" for="apellido">Apellido</label>
-                            <input text="" type="text" class="form__input" id="fila-apellidos" name="apellido" readonly="true">
-                        </div>
-                        <div class="form__item">
-                            <label class="form__label" for="mascota">Nombre de tu mascota</label>
-                            <input type="text" class="form__input" id="fila-mascotas" name="mascot" readonly="true" >
-                        </div>
-                        <div class="form__item">
-                            <label class="form__label" for="fecha">Fecha de Nacimiento</label>
-                            <input text="" type="text" class="form__input" id="fecha-generada" name="fecha" readonly="true" >
-                        </div>
-                        <div class="form__item">
-                            <label class="form__label" for="telefono">Teléfono</label>
-                            <input type="text" class="form__input form__input--date" id="numero-generado" name="telefono" readonly="true">
-                        </div>
-                        <div class="form__item">
-                            <label class="form__label" for="edad">Edad</label>
-                            <input text="" type="text" class="form__input" id="edad" name="edad" readonly="true">
-                        </div>
-                    </div>
-                    <div class="form__send">
-                        <!-- Agregar la clase "error" en "form__send-content"  para mostrar el mensaje de error -->
-                        <div class="form__send-content ">
-                            <div class="form__item">
-                                <label class="form__label form__label--email" for="email">Correo Electrónico</label>
-                                <input class="form__input form__input--email" id="email" placeholder="Correo Electronico" value="@gmail.com" name="correo">
-                            </div>
-                            <div class="form__item">
-                                <label class="form__label form__label--password" for="password">Contraseña</label>
-                                <input class="form__input form__input--password" id="contrasena" placeholder="Contraseña" name="contra" maxlength="8">
-                            </div>
-                            <p class="form__alert">Complete los campos correctamente</p>
-                        </div>
-                        <input type="button" class="form__submit" value="Enviar" onclick="validar_formulario()">
-                    </div>
-                </form>
-            
-            </div>
-        </div>
-    </main>
-
-    <!--Todas las funciones-->
+<!--Todas las funciones-->
     <script>
         // Función para cargar y mostrar un elemento aleatorio de un archivo CSV
         function mostrarElementoAleatorio(url, containerId) {
@@ -258,5 +261,4 @@ function mostrarElementoAleatorioApellido(url, containerId) {
         }
     </script>
 </body>
-
 </html>

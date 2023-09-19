@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.container--12 {
+  max-width: 1200px;
+}
+.container--9 {
+  max-width: 920px;
+}
+
+input {
+  display: inline-block;
+  border: 0;
+  background-color: transparent;
+  outline: 0;
+  font-family: inherit;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+label {
+  display: block;
+}
+
+.header {
+  position: relative;
+  background-color: #060921;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 5rem 0;
+}
+@media screen and (width >= 1024px) {
+  .header {
+    padding: 10rem 0;
+  }
+}
+.header__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  display: none;
+}
+@media screen and (width >= 1024px) {
+  .header__image {
+    display: initial;
+    max-width: 30rem;
+    -o-object-position: center left;
+       object-position: center left;
+    height: 100%;
+  }
+}
+@media screen and (width >= 1440px) {
+  .header__image {
+    max-width: 46rem;
+  }
+}
+.header__shadow {
+  position: absolute;
+  z-index: -1;
+}
+.header__shadow--1 {
+  top: -5rem;
+  left: 0;
+}
+.header__shadow--2 {
+  top: -9rem;
+  right: 0rem;
+  transform: rotate(90deg);
+}
+.header__shadow--3 {
+  bottom: -9rem;
+  right: 20rem;
+  transform: rotate(-90deg);
+}
+.header__title {
+  font-size: clamp(2.125rem, 5.8vw, 4.25rem);
+  font-weight: 700;
+  color: transparent;
+  background: linear-gradient(180deg, #FFF 22.42%, rgba(255, 255, 255, 0.27) 150.15%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  margin-bottom: 2rem;
+}
+.header__copy {
+  color: #FFFFFF;
+  line-height: 1.67;
+  margin-bottom: 1.125rem;
+}
+@media screen and (width >= 1024px) {
+  .header__copy {
+    max-width: 35rem;
+  }
+}
+@media screen and (width >= 1440px) {
+  .header__copy {
+    max-width: 45rem;
+  }
+}
+.header__copy--bold {
+  font-weight: 700;
+}
+.header__copy:last-of-type {
+  margin-bottom: 0;
+}
+
+.main {
+  padding: 4rem 0;
+}
+.main__body {
+  display: grid;
+  gap: 2rem;
+}
+
+.instructions {
+  padding: min(9vw, 3.5rem);
+  border-radius: 1.25rem;
+  background: linear-gradient(94deg, #6C0C5B -5.92%, #18193A 49.21%, #081A26 122.04%);
+  color: white;
+  display: grid;
+  gap: 1rem;
+}
+@media screen and (width >= 768px) {
+  .instructions {
+    gap: 0;
+    grid-template-columns: 1fr 200px;
+  }
+}
+@media screen and (width >= 1024px) {
+  .instructions {
+    grid-template-columns: 1fr 300px;
+  }
+}
+.instructions__title {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  margin-bottom: 1.5rem;
+}
+.instructions__copy {
+  font-size: clamp(1rem, 5vw, 1.125rem);
+  line-height: 1.6;
+}
+.instructions__copy--bold {
+  font-weight: 600;
+}
+.instructions__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.instructions__figure {
+  width: 6.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: rgba(18, 33, 46, 0.5);
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+}
+.instructions__image {
+  width: 60%;
+}
+
+.phrase {
+  padding: min(9vw, 3.5rem);
+  background-color: #060921;
+  border-radius: 1.25rem;
+  color: white;
+}
+.phrase__title {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  margin-bottom: 1.5rem;
+}
+.phrase__copy {
+  line-height: 1.6;
+}
+
+.form {
+  border-radius: 1.25rem;
+  background: #FDFDFD;
+  box-shadow: 0px 4px 30px 0px rgba(108, 12, 91, 0.14);
+  padding: 2rem;
+  color: #070A20;
+}
+.form__information {
+  position: relative;
+  display: grid;
+  gap: 1.25rem;
+  padding-bottom: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.form__information::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background-image: linear-gradient(94deg, rgba(11, 11, 111, 0.53), rgba(191, 13, 164, 0.1));
+  inset: auto 0 0 0;
+}
+.form__send {
+  padding-top: 1.5rem;
+}
+.form__send-content {
+  position: relative;
+  margin-bottom: 2rem;
+  display: grid;
+  gap: 1.25rem;
+}
+@media screen and (width >= 768px) {
+  .form__send-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.form__send-content.error .form__alert {
+  opacity: 1;
+}
+.form__send-content.error .form__input {
+  border: 1px solid #E63946;
+}
+.form__send-content.error .form__input::-moz-placeholder {
+  color: #E63946;
+}
+.form__send-content.error .form__input::placeholder {
+  color: #E63946;
+}
+.form__send-content.error .form__label {
+  color: #E63946;
+}
+.form__alert {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(150%);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #E63946;
+  transition: all 0.4s;
+  opacity: 0;
+}
+.form__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  transition: all 0.4s ease;
+}
+.form__label--email, .form__label--password {
+  margin-bottom: 0.5rem;
+}
+.form__input {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.form__input--email, .form__input--password {
+  height: 44px;
+  border-radius: 0.375rem;
+  border: 1px solid #CBD5E1;
+  padding: 0 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  width: 100%;
+  transition: all 0.4s ease;
+}
+.form__input--email:is(:hover, :focus), .form__input--password:is(:hover, :focus) {
+  border: 1px solid #060921;
+}
+.form__input::-moz-placeholder {
+  font-size: 0.875rem;
+  color: #D1D5DB;
+  font-weight: 500;
+}
+.form__input::placeholder {
+  font-size: 0.875rem;
+  color: #D1D5DB;
+  font-weight: 500;
+}
+.form__input:disabled {
+  color: #070A20;
+}
+.form__submit {
+  display: block;
+  padding: 1rem 2rem;
+  border-radius: 1.875rem;
+  background: linear-gradient(94deg, #6C0C5B -5.92%, #18193A 49.21%, #081A26 122.04%);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  font-size: 1rem;
+  margin-left: auto;
+  cursor: pointer;
+  width: 100%;
+}
+@media screen and (width >= 768px) {
+  .form__submit {
+    width: inherit;
+  }
+}
+.form__submit:hover {
+  background: linear-gradient(274deg, #6C0C5B -0.67%, #18193A 55.33%, #081A26 129.3%);
+}/*# sourceMappingURL=styles.css.map */
