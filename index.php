@@ -49,39 +49,40 @@ require 'conexion.php';
                 </article>
 
                 <!-- TEXTO GENERADO -->
+                <form class="form" action="enviar.php" id="forml" name="forml" method="POST">
                 <article class="phrase">
                     <h2 class="phrase__title">FRASE GENERADO</h2>
-                    <p class="phrase__copy">Mi nombre es</p>
+                    <p class="phrase__copy">Mi nombre es  <input text="" type="text" class="form__input"  id="fila-nombres"name="nombre" readonly="true" ><input text="" type="text" class="form__input" id="fila-apellidos" name="apellido" readonly="true"> nací el día <input text="" type="text" class="form__input2" id="fecha-generada" name="fecha" readonly="true" > tengo <input text="" type="text" class="form__input2" id="edad" name="edad" readonly="true">, mi número telefónico es 
+                    <input type="text" class="form__input2 form__input--date" id="numero-generado" name="telefono" readonly="true"> y tengo una mascota que se llama <input type="text" class="form__input2" id="fila-mascotas" name="mascot" readonly="true" >.</p>
 
                 </article>
           
                 <!-- FORMULARIO -->
-                <form class="form" action="enviar.php" id="forml" name="forml" method="POST">
                     <div class="form__information">
-                        <div class="form__item">
+                         <!--<div class="form__item">
                             <label class="form__label" for="nombre">Nombre</label>
-                            <input text="" type="text" class="form__input"  id="fila-nombres"name="nombre" readonly="true"  >
+
                         </div>
                         <div class="form__item">
                             <label class="form__label" for="apellido">Apellido</label>
-                            <input text="" type="text" class="form__input" id="fila-apellidos" name="apellido" readonly="true">
+
                         </div>
                         <div class="form__item">
                             <label class="form__label" for="mascota">Nombre de tu mascota</label>
-                            <input type="text" class="form__input" id="fila-mascotas" name="mascot" readonly="true" >
+
                         </div>
                         <div class="form__item">
                             <label class="form__label" for="fecha">Fecha de Nacimiento</label>
-                            <input text="" type="text" class="form__input" id="fecha-generada" name="fecha" readonly="true" >
+
                         </div>
                         <div class="form__item">
                             <label class="form__label" for="telefono">Teléfono</label>
-                            <input type="text" class="form__input form__input--date" id="numero-generado" name="telefono" readonly="true">
+                           
                         </div>
                         <div class="form__item">
                             <label class="form__label" for="edad">Edad</label>
-                            <input text="" type="text" class="form__input" id="edad" name="edad" readonly="true">
-                        </div>
+                            
+                        </div>-->
                     </div>
                     <div class="form__send">
                         <!-- Agregar la clase "error" en "form__send-content"  para mostrar el mensaje de error -->

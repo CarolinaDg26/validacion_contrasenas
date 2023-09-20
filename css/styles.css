@@ -265,8 +265,21 @@ label {
   margin-bottom: 0.5rem;
 }
 .form__input {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.10 rem;
+  font-weight: 600;
+  color: white;
+  /* border: 1px red solid; */
+  padding: 10px;
+  width: 190px;
+}
+.form__input2 {
+  font-size: 1.10 rem;
+  font-weight: 600;
+  color: white;
+  /* border: 1px red solid; */
+  padding: 10px;
+  width: 120px;
+  text-align: center;
 }
 .form__input--email, .form__input--password {
   height: 44px;
@@ -277,18 +290,19 @@ label {
   font-weight: 500;
   width: 100%;
   transition: all 0.4s ease;
+  color: #000000;
 }
 .form__input--email:is(:hover, :focus), .form__input--password:is(:hover, :focus) {
   border: 1px solid #060921;
 }
 .form__input::-moz-placeholder {
   font-size: 0.875rem;
-  color: #D1D5DB;
+  color: #000000;
   font-weight: 500;
 }
 .form__input::placeholder {
   font-size: 0.875rem;
-  color: #D1D5DB;
+  color: #000000;
   font-weight: 500;
 }
 .form__input:disabled {
