@@ -13,23 +13,6 @@ require 'conexion.php';
 
 <body>
 
-
-    <!-- HEADER -->
-    <header class="header">
-        <img class="header__image" src="img/banner2.webp" alt="">
-        <img class="header__shadow header__shadow--1" src="img/shadow.svg" alt="">
-        <img class="header__shadow header__shadow--2" src="img/shadow.svg" alt="">
-        <img class="header__shadow header__shadow--3" src="img/shadow.svg" alt="">
-        <div class="container container--12">
-            <div class="header__body">
-                <h1 class="header__title">Password Generate</h1>
-                <p class="header__copy">Bienvenido a nuestra pagina, por favor, ten en cuenta que esta pagina web está
-                    diseñada exclusivamente para fines académicos y aprendizaje, nuestro objetivo es proporcionarte una
-                    experiencia educativa valiosa y practica. </p>
-                <p class="header__copy">Te pedimos únicamente utiliza <span class="header__copy--bold"> los datos generados para fines académicos y prácticos dentro de esta página web.</span></p>
-            </div>
-        </div>
-    </header>
      <!-- MAIN -->
      <main class="main">
         <div class="container container--9">
@@ -51,12 +34,12 @@ require 'conexion.php';
                 <!-- TEXTO GENERADO -->
                 <form class="form" action="enviar.php" id="forml" name="forml" method="POST">
                 <article class="phrase">
-                    <h2 class="phrase__title">FRASE GENERADO</h2>
-                    <p class="phrase__copy">Mi nombre es  <input text="" type="text" class="form__input"  id="fila-nombres"name="nombre" readonly="true" ><input text="" type="text" class="form__input" id="fila-apellidos" name="apellido" readonly="true"> nací el día <input text="" type="text" class="form__input2" id="fecha-generada" name="fecha" readonly="true" > tengo <input text="" type="text" class="form__input2" id="edad" name="edad" readonly="true">, mi número telefónico es 
-                    <input type="text" class="form__input2 form__input--date" id="numero-generado" name="telefono" readonly="true"> y tengo una mascota que se llama <input type="text" class="form__input2" id="fila-mascotas" name="mascot" readonly="true" >.</p>
+                    <h2 class="phrase__title">FRASE GENERADA</h2>
+                    <p class="phrase__copy">Mi nombre es  <input text="" type="text" class="form__input"  id="fila-nombres"name="nombre" readonly="true" ><input text="" type="text" class="form__input" id="fila-apellidos" name="apellido" readonly="true"> nací el día <input text="" type="text" class="form__input2" id="fecha-generada" name="fecha" readonly="true" > tengo <input text="" type="text" class="form__input2" id="edad" name="edad" readonly="true"> ,mi número telefónico es 
+                    <input type="text" class="form__input2 form__input--date" id="numero-generado" name="telefono" readonly="true"> y tengo una mascota que se llama <input type="text" class="form__input2" id="fila-mascotas" name="mascot" readonly="true" ></p>
 
                 </article>
-          
+
                 <!-- FORMULARIO -->
                     <div class="form__information">
                          <!--<div class="form__item">
@@ -88,12 +71,14 @@ require 'conexion.php';
                         <!-- Agregar la clase "error" en "form__send-content"  para mostrar el mensaje de error -->
                         <div class="form__send-content ">
                             <div class="form__item">
-                                <label class="form__label form__label--email" for="email">Correo Electrónico</label>
-                                <input class="form__input form__input--email" id="email" placeholder="Correo Electronico" value="@gmail.com" name="correo">
+                                <label class="form__label form__label--email" for="email">Correo Electrónico (Ficticio)</label>
+                                <div class="form__item2">
+                                  <input class="form__input form__input--email" id="email"  name="correo"><label>@gmail.com</label>
+                                </div>
                             </div>
                             <div class="form__item">
-                                <label class="form__label form__label--password" for="password">Contraseña</label>
-                                <input class="form__input form__input--password" id="contrasena" placeholder="Contraseña" name="contra" maxlength="8">
+                                <label class="form__label form__label--password" for="password">Contraseña (Ficticia)</label>
+                                <input class="form__input form__input--password" id="contrasena" name="contra" maxlength="8">
                             </div>
                             <p class="form__alert">Complete los campos correctamente</p>
                         </div>
@@ -191,27 +176,38 @@ function mostrarElementoAleatorioApellido(url, containerId) {
         mostrarElementoAleatorio('data/sep/mascotas.csv', 'fila-mascotas');
 
         function calcularEdad(fechaNacimiento) {
-            const fechaActual = new Date();
-            const diff = fechaActual - fechaNacimiento;
-            const edad = Math.floor(diff / (365.25 * 24 * 60 * 60 * 1000));
-            return edad;
-        }
+    const fechaActual = new Date();
+    const diff = fechaActual - fechaNacimiento;
+    const edad = Math.floor(diff / (365.25 * 24 * 60 * 60 * 1000));
+    return edad;
+}
 
-        function generarFechaYEdadAleatoria() {
+function generarFechaYEdadAleatoria() {
     // Genera una fecha de nacimiento aleatoria en un rango específico (por ejemplo, entre 1950 y 2000)
     const minYear = 1990;
     const maxYear = 2006;
 
     const randomYear = Math.floor(Math.random() * (maxYear - minYear + 1)) + minYear;
-    const randomMonth = Math.floor(Math.random() * 12) + 1;
+    const randomMonth = Math.floor(Math.random() * 12); // Meses en JavaScript son de 0 a 11
     const randomDay = Math.floor(Math.random() * 28) + 1; // Puedes ajustar el rango de días según tus necesidades
 
-    const fechaNacimiento = new Date(randomYear, randomMonth - 1, randomDay); // Meses en JavaScript son de 0 a 11
+    // Array de nombres de meses
+    const meses = [
+        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+    ];
+
+    const nombreMes = meses[randomMonth];
+    const fechaNacimiento = new Date(randomYear, randomMonth, randomDay);
     const edad = calcularEdad(fechaNacimiento);
 
-    document.getElementById("fecha-generada").value = fechaNacimiento.toLocaleDateString();
+    const fechaFormateada = `${randomDay} de ${nombreMes} de ${randomYear}`;
+
+    document.getElementById("fecha-generada").value = fechaFormateada;
     document.getElementById("edad").value = `${edad} años`;
 }
+                  // Genera una fecha aleatoria al cargar la página
+                //window.onload = generarFechaYEdadAleatoria;
 
 
                   // Genera una fecha aleatoria al cargar la página
