@@ -83,7 +83,8 @@ require 'conexion.php';
                             <p class="form__alert">Complete los campos correctamente</p>
                         </div>
                         <input type="button" class="form__submit" value="Enviar" onclick="validar_formulario()">
-                    </div>
+                    </div> <br>
+                    <p class="instructions__copy2">"Al dar clic en “Enviar”, usted acepta su participación, confirmando que leyó la información disponible en el <a class="instructions__copy--bold" href="">consentimiento firmado,</a> le quedaron claros el propósito y actividades del proyecto, se le explicó que su participación es voluntaria, confidencial y sin costo, y que se le dieron los datos de contacto del responsable del proyecto."</p>
                 </form>
             
             </div>

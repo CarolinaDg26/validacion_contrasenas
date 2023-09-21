@@ -159,6 +159,10 @@ label {
   font-size: clamp(1rem, 5vw, 1.125rem);
   line-height: 1.6;
 }
+.instructions__copy2 {
+  font-size: 11px;
+  line-height: 1.6;
+}
 .instructions__copy--bold {
   font-weight: 600;
 }
