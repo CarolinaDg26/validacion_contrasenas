@@ -106,21 +106,20 @@ require 'conexion.php';
 
             var cells = rows[randomRowIndex].split(',');
 
-            // Crea un objeto con los datos del elemento aleatorio
+        
             var elementoAleatorio = {
                 nombre: cells[0],
                 apellido: cells[1],
-                // Agrega más propiedades según sea necesario
+                
             };
 
 
-            // Ahora puedes usar este objeto en otras partes del código
+            
             var campoNombre = document.getElementById(containerId);
             // alert (elementoAleatorio.nombre);
             campoNombre.value = elementoAleatorio.nombre;
 
-            // También puedes almacenar el objeto en una variable global si lo necesitas en múltiples lugares.
-            //window.elementoAleatorio = elementoAleatorio;
+            
         } else {
             console.error('No se pudo cargar el archivo CSV.');
         }
@@ -148,7 +147,7 @@ function mostrarElementoAleatorioApellido(url, containerId) {
             var elementoAleatorio = {
                 nombre: cells[0]+" "+cells2[0],
                 apellido: cells[1]+" "+cells2[1],
-                // Agrega más propiedades según sea necesario
+                
             };
 
 
