@@ -78,7 +78,8 @@ require 'conexion.php';
                             </div>
                             <div class="form__item">
                                 <label class="form__label form__label--password" for="password">Contraseña (Ficticia)</label>
-                                <input class="form__input form__input--password" id="contrasena" name="contra" maxlength="8">
+                                <input class="form__input form__input--password" id="contrasena" name="contra" pattern="^(?=.*[A-Z])(?=.*[a-z\d])(?=.*[\W_]).{8,}$" title="La contraseña debe contener al menos una letra mayúscula, una minúscula, un número y un carácter especial, y tener al menos 8 caracteres de longitud." 
+        required>
                             </div>
                             <p class="form__alert">Complete los campos correctamente</p>
                         </div>
